@@ -28,6 +28,7 @@ import subscriptionRoutes from './modules/subscriptions/subscription.routes';
 
 // Cron jobs
 import './jobs/reminderJob';
+import './jobs/keepAliveJob';
 
 const app = express();
 
