@@ -25,6 +25,7 @@ import customerRoutes from './modules/customers/customer.routes';
 import transactionRoutes from './modules/transactions/transaction.routes';
 import notificationRoutes from './modules/notifications/notification.routes';
 import subscriptionRoutes from './modules/subscriptions/subscription.routes';
+import expenseRoutes from './modules/expenses/expense.routes';
 
 // Cron jobs
 import './jobs/reminderJob';
@@ -75,13 +76,14 @@ app.use(`${API}/customers`, customerRoutes);
 app.use(`${API}/transactions`, transactionRoutes);
 app.use(`${API}/notifications`, notificationRoutes);
 app.use(`${API}/subscriptions`, subscriptionRoutes);
+app.use(`${API}/expenses`, expenseRoutes);
 
 // ── Error handlers ─────────────────────────────────────────────
 app.use(notFound);
 app.use(errorHandler);
 
 // ── Bootstrap ─────────────────────────────────────────────────
-const PORT = Number(process.env.PORT) || 5000;
+const PORT = Number(process.env.PORT) || 5050;
 
 async function bootstrap() {
   try {
